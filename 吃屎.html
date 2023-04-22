@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>surveyPage</title>
+  </head>
+
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      background-color: #1b1b32;
+      color: #f5f6f7;
+      font-family: Tahoma;
+      font-size: 16px;
+    }
+
+    h1,
+    p {
+      margin: 1em auto;
+      text-align: center;
+    }
+
+    form {
+      width: 60vw;
+      max-width: 500px;
+      min-width: 300px;
+      margin: 0 auto;
+      padding-bottom: 2em;
+    }
+
+    fieldset {
+      border: none;
+      padding: 2rem 0;
+      border-bottom: 3px solid #3b3b4f;
+    }
+
+    fieldset:last-of-type {
+      border-bottom: none;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    input,
+    textarea,
+    select {
+      margin: 10px 0 0 0;
+      width: 100%;
+      min-height: 2em;
+    }
+
+    input,
+    textarea {
+      background-color: #0a0a23;
+      border: 1px solid #0a0a23;
+      color: #ffffff;
+    }
+
+    .inline {
+      width: unset;
+      margin: 0 0.5em 0 0;
+      vertical-align: middle;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 60%;
+      margin: 1em auto;
+      height: 2em;
+      font-size: 1.1rem;
+      background-color: #3b3b4f;
+      border-color: white;
+      min-width: 300px;
+    }
+  </style>
+  <body>
+    <h1 id="title">嘎巴吃屎表</h1>
+    <p id="description">感谢您为提升嘎巴的吃屎体验所花费的时间</p>
+    <form
+      method="post"
+      action="https://register-demo.freecodecamp.org"
+      id="survey-form"
+    >
+      <fieldset>
+        <label for="name" id="name-label"
+          >请输入你的姓名：<input
+            id="name"
+            type="text"
+            placeholder="在此输入姓名"
+            required
+        /></label>
+        <label for="email" id="email-label"
+          >请输入你的邮箱：<input
+            id="email"
+            type="email"
+            placeholder="在此输入邮箱"
+            required
+        /></label>
+        <label for="number" id="number-label"
+          >请输入你的年龄：
+          <input
+            id="number"
+            type="number"
+            placeholder="在此输入年龄"
+            required
+            min="1"
+            max="120"
+          />
+        </label>
+        <label for="role"
+          >请选择你现在的状态：
+          <select id="dropdown" name="dropdown">
+            <option value="">(请选择)</option>
+            <option value="1">三天没吃</option>
+            <option value="2">五天没吃</option>
+            <option value="3">刚吃过</option>
+            <option value="4">已经戒</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        你会推荐朋友们吃哪种屎呢？
+        <label for="dry-shit"
+          ><input
+            id="dry-shit"
+            type="radio"
+            name="shit-type"
+            class="inline"
+            value="1"
+          />黄色干拌</label
+        >
+        <label for="moist-shit"
+          ><input
+            id="moist-shit"
+            type="radio"
+            name="shit-type"
+            class="inline"
+            value="2"
+          />辣椒红汤</label
+        >
+        <label for="old-shit"
+          ><input
+            id="old-shit"
+            type="radio"
+            name="shit-type"
+            class="inline"
+            value="3"
+          />风味发酵</label
+        >
+      </fieldset>
+      <fieldset>
+        <label for="role"
+          >什么事件让你爱上吃屎？
+          <select id="dropdown" name="dropdown">
+            <option value="">(请选择)</option>
+            <option value="1">浅尝一口后发现好吃</option>
+            <option value="2">想挑战老八</option>
+            <option value="3">工作压力吃屎解压</option>
+            <option value="4">老公废物如屎</option>
+          </select>
+        </label>
+<label>如果必须选择一个人的屎来吃，你会选...</label>
+        <label for="shit-providers-1">
+          
+          <input
+            id="shit-providers-1"
+            type="checkbox"
+            name="shit-providers"
+            class="inline"
+            value="1"
+          />
+          陶昆文
+        </label>
+        <label for="shit-providers-2">
+          <input
+            id="shit-providers-2"
+            type="checkbox"
+            name="shit-providers"
+            class="inline"
+            value="2"
+          />
+          杨甦悟
+        </label>
+        <label for="shit-providers-3">
+          <input
+            id="shit-providers-3"
+            type="checkbox"
+            name="shit-providers"
+            class="inline"
+            value="3"
+          />
+          唐璜铎
+        </label>
+        <label for="shit-providers-4">
+          <input
+            id="shit-providers-4"
+            type="checkbox"
+            name="shit-providers"
+            class="inline"
+            value="4"
+          />
+          唐恩在
+        </label>
+        <label for="shit-providers-5">
+          <input
+            id="shit-providers-5"
+            type="checkbox"
+            name="shit-providers"
+            class="inline"
+            value="5"
+          />
+          老习
+        </label>
+        <label for="sug"
+          >提供一些吃屎经验：
+          <textarea
+            id="sug"
+            name="sug"
+            rows="3"
+            cols="30"
+            placeholder="说到吃面，我可在行拉~"
+          ></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="提交" id="submit" />
+    </form>
+  </body>
+</html>
